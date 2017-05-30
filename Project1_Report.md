@@ -1,38 +1,26 @@
-# **Finding Lane Lines on the Road** 
+# **Project 1: Finding Lane Lines on the Road** 
 
-## Writeup Template
+## 1. Pipeline Description
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+### 1.1    Image Preprocessing
 
----
+First, I converted the images to grayscale, then I .... 
 
-**Finding Lane Lines on the Road**
+### 1.2 Finding Targets and Drawing Full Lines
 
-The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
-
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
----
-
-### Reflection
-
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
-
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+#### a. Finding left and right groups
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
+#### b. Finding left and right targets
+
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
+#### c. Finding left and right drawing positions
 
+d
 
-### 2. Identify potential shortcomings with your current pipeline
+## 2. Shortcomings with Current Pipeline
 
 
 One potential shortcoming would be what would happen when ... 
@@ -40,7 +28,7 @@ One potential shortcoming would be what would happen when ...
 Another shortcoming could be ...
 
 
-### 3. Suggest possible improvements to your pipeline
+## 3. Possible Improvements
 
 A possible improvement would be to ...
 
