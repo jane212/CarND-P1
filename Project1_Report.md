@@ -2,11 +2,11 @@
 
 ## 1. Pipeline Description
 
-### 1.1  Image preprocessing
+### 1.1 Image preprocessing
 
 First, I converted the images to grayscale, then I .... 
 
-### 1.2  Finding targets and drawing full lines
+### 1.2 Finding targets and drawing full lines
 
 #### a. Finding left and right groups
 
