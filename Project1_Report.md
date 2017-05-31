@@ -4,7 +4,19 @@
 
 ### 1.1 Image preprocessing
 
-First, I converted the images to grayscale, then I .... 
+There are 5 basic steps in image preprocessing:
+
+a) converting the color image into gray scale. 
+
+b) using Gaussian kernel with size of 7 to blur the gray image to remove the noise. 
+
+c) using Canny function with specific low and high thresholds to detect the egde.
+
+d) defining region of interest based on the image dimensions, and masking it on the edges.
+
+e) using Hough Transform with parameters (set in the IPYNB file) to find lines among those edges.
+
+After preprocessing, a basic line image could be obtained. 
 
 ### 1.2 Finding targets and drawing full lines
 
