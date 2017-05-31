@@ -20,7 +20,7 @@ e) using Hough Transform with parameters (set in the IPYNB file) to find lines a
 
 All these steps are packed in 'preprocess' function.
 
-After preprocessing, a basic line image could be obtained. Instead of only returning the line image from previous Hough Transform function, herer I also returned the lines object for picking and drawing full lines.
+After preprocessing, a basic line image could be obtained. Instead of only returning the line image from previous Hough Transform function, here I also returned the lines object for picking and drawing full lines.
 
 ### 1.2 Finding targets and drawing full lines
 
@@ -30,7 +30,7 @@ To draw a line on left and right, first I need to find left and right groups in 
 
 #### b. Finding left and right targets
 
-After finding left and right groups, next is finding target line in each group. Here my logic is using the longest line in each group as the target line. Also, the bottom point of that line should be in the bottom area of the image, which means y1<=bottom_boundary. This rule is used to focus on the bottom part of the image to exclude the distraction from objects or curved lanes in distance.
+After finding left and right groups, next is finding target line in each group. Here my logic is using the longest line in each group as the target line. Also, the bottom point of that line should be in the bottom area of the image, which means y1<=bottom_boundary. This rule is used to focus on the bottom part of the image to exclude the distraction from objects or curved lane in distance.
 
 This function is written as 'find_target.'
 
@@ -44,6 +44,8 @@ The 'find_xs' function will return both x and y values for drawing full lines on
 
 The shortcoming with current pipeline is that it's too sensitive to the region selected. If the region is too small, then the program would not find target lines under my current algorithm. Or if the region is too wide, the curb might be detected.
 
+Another shortcoming is the line I detected could sway sharply, because the longest line may not be always the real target.
+
 ## 3. Possible Improvements
 
-Since the camera is mounted at the fixed position, and the car should be driving in the lane, thus, considering the continuity of the lane lines is reasonable. The possible improvement is evaluating the slope and intercept of the lines in each frame and updating those two parameters.
+Since the camera is mounted at the fixed position, and the car should be driven in the lane, thus, considering the continuity of the lane lines is reasonable. The possible improvement is evaluating the slope and intercept of the lines in each frame and updating those two parameters.
